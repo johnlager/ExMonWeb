@@ -5,6 +5,6 @@ defmodule ExMonWeb.WelcomeController do
   # o phx sempre recebe uma conexao e a devolve
   def index(conn, _params) do
     IO.inspect(conn)
-    text(conn, "Welcome to your first PHX API!!!")
+    text(conn, "Welcome to my first Phoenix API!!! :) https://github.com/johnlager/ExMonWeb")
   end
 end
