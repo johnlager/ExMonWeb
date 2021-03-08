@@ -39,7 +39,9 @@ defmodule ExMon.Trainer do
   # se o changeset for valido, ele pega o changes
   defp put_pass_hash(%Ecto.Changeset{valid?: true, changes: %{password: password}} = changeset) do
     # adiona uma change, no changes do changeset hehe
-    change(changeset, Argon2.add_hash(password))
+    # change(changeset, Argon2.add_hash(password))
+
+    change(changeset, Bcrypt.add_hash(password))
   end
 
   defp put_pass_hash(changeset), do: changeset
